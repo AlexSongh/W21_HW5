@@ -92,13 +92,13 @@ class Deck:
             card_strs.append(c.__str__()) # appends the string that represents that card to the empty list
         if card.__str__() not in card_strs: # if the string representing this card is not in the list already
             self.cards.append(card) # append it to the list
-    
+
     def sort_cards(self):
         '''returns the Deck to its original order
-        
+
         Cards will be in the same order as when Deck was constructed.
         self.cards is modified in place.
-        Parameters  
+        Parameters
         ----------
         None
         Returns
