@@ -149,7 +149,7 @@ class Deck:
         self.shuffle()
         hand_list = []
 
-        if num_hands*num_cards < len(self.cards):
+        if num_hands*num_cards < len(self.cards) and num_hands > 0 and num_cards > 0:
             for i in range(num_hands):
                 hand_cards = self.deal_hand(num_cards)
                 hand_list.append(Hand(hand_cards))
@@ -312,8 +312,10 @@ def print_hand(hand):
 # print("-"*60)
 # for card in hand.cards:
 #     print(card)
-# deck = Deck()
-# list1 = deck.deal(7,8)
-# print(list1)
+deck = Deck()
+list1 = deck.deal(8,-1)
+print(list1)
+for i in list1:
+   print(len(i.cards))
 # for i in list1:
 #     print(len(i))
