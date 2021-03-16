@@ -54,6 +54,16 @@ class TestDeck(unittest.TestCase):
         self.assertEqual(len(handlist2[0].cards),7)
         self.assertEqual(len(handlist2[-1].cards),6)
         self.assertEqual(len(handlist2[4].cards),6)
+        #Test when there num_cards == -1
+        num_hands_3 = 8
+        num_cards_3 = -1
+        deck3 = hw5_cards_ec2.Deck()
+        handlist3 = deck3.deal(num_hands_3,num_cards_3)
+        self.assertEqual(len(handlist3),8)
+        self.assertIsInstance(handlist3[-1],hw5_cards_ec2.Hand)
+        self.assertEqual(len(handlist3[0].cards),7)
+        self.assertEqual(len(handlist3[-1].cards),6)
+        self.assertEqual(len(handlist3[4].cards),6)
 
 
 
